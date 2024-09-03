@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .code{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <pre>
+        6.Scenario: Tea Stall Customer Order Processing
+----------------------------------------------
+Context: You are managing a small tea stall that offers different types of tea. The stall has three main types of tea:
+
+Regular Tea: Costs ₹15 per cup.
+Masala Tea: Costs ₹20 per cup.
+Ginger Tea: Costs ₹25 per cup.
+The stall also offers add-ons that customers can choose to enhance their tea:
+
+Extra Sugar: Adds ₹2.50 per cup.
+Extra Milk: Adds ₹5 per cup.
+No Add-ons: No additional cost.
+
+Scenario Description:
+A customer approaches the stall and places an order for one type of tea with or without add-ons. You need to calculate the total price based on the customer’s choices and provide them with the final cost.
+
+Inputs:
+Tea Type: The type of tea the customer wants to order ("Regular", "Masala", or "Ginger").
+Add-On: The additional option the customer selects ("Extra Sugar", "Extra Milk", or "No Add-ons").
+
+Outputs:
+Total Price: The final amount the customer needs to pay, based on their tea selection and chosen add-on.
+Explanation:
+Determine the Base Price:
+First, identify the type of tea the customer orders. The base price is determined by this choice:
+If the customer orders Regular Tea, the base price is ₹15.
+If the customer orders Masala Tea, the base price is ₹20.
+If the customer orders Ginger Tea, the base price is ₹25.
+
+Calculate Add-On Costs:
+Next, consider the add-on the customer chooses:
+If the customer selects Extra Sugar, add ₹2.50 to the base price.
+If the customer selects Extra Milk, add ₹5 to the base price.
+If the customer selects No Add-ons, no additional cost is added.
+
+Compute the Total Price:
+Add the cost of the add-on (if any) to the base price of the selected tea.
+Provide the Output:
+The final output should be the total price that the customer needs to pay.
+Example:
+Example 1:
+
+Input:
+
+Tea Type: "Regular"
+Add-On: "Extra Sugar"
+Calculation:
+
+Base Price for Regular Tea: ₹15
+Add-On Cost for Extra Sugar: ₹2.50
+Total Price: ₹15 + ₹2.50 = ₹17.50
+Output:
+
+Total Price: ₹17.50
+Example 2:
+
+Input:
+
+Tea Type: "Ginger"
+Add-On: "No Add-ons"
+Calculation:
+
+Base Price for Ginger Tea: ₹25
+Add-On Cost for No Add-ons: ₹0.00
+Total Price: ₹25 + ₹0.00 = ₹25
+Output:
+
+Total Price: ₹25
+This scenario helps in understanding how to apply conditional statements to real-life situations where a decision must be made based on user input, leading to a basic output that directly reflects the choices made by the customer.
+    </pre>
+<pre class="code">
+var input;
+var tea=prompt("enter time type");
+var add=prompt("enter add-ons");
+var cost;
+input=(tea=="regulartea"||tea=="masalatea"||tea=="gingertea")?"your tea":"please enter valid tea name";
+console.log(input);
+if(tea=="regulartea"){
+    var cost=15; 
+    if(add=="extra sugar"){
+        var cost =cost+2.5;
+    }
+    else if(add=="extra milk"){
+        var cost=cost+5;
+    }
+    else if(add="no add-on"){
+        var cost=cost;
+    }
+    console.log(cost);
+}
+if(tea=="masalatea"){
+    var cost=20; 
+    if(add=="extra sugar"){
+        var cost =cost+2.5;
+    }
+    else if(add=="extra milk"){
+        var cost=cost+5;
+    }
+    else if(add="no add-on"){
+        var cost=cost;
+    }
+    console.log(cost);
+}
+if(tea=="gingertea"){
+    var cost=25; 
+    if(add=="extra sugar"){
+        var cost =cost+2.5;
+    }
+    else if(add=="extra milk"){
+        var cost=cost+5;
+    }
+    else if(add="no add-on"){
+        var cost=cost;
+    }
+    console.log(cost);
+}
+    </pre>
+    <a href="./index.html">Return to home</a>
+</body>
+</html>
